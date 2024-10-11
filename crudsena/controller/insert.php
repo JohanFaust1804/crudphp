@@ -2,7 +2,7 @@
 include('../model/connection.php');
 $con = connection();
 
-$nombre = $_POST['name'];
+$nombre = $_POST['nombre'];
 $lastname = $_POST['lastname'];
 $username = $_POST['username'];
 $pass = $_POST['password'];

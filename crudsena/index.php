@@ -22,7 +22,7 @@ $query = mysqli_query($con, $sql);
         <div class="users-form">
             <h1>Crear Usuario</h1>
             <form action="controller/insert.php" method="POST">
-                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="text" name="nombre" placeholder="Nombre" required>
                 <input type="text" name="lastname" placeholder="Apellidos" required>
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
