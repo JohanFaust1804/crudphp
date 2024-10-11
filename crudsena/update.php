@@ -26,7 +26,7 @@
                 <input type="text" name="nombre" placeholder="Nombre" value="<?= $row['nombre']?>" required>
                 <input type="text" name="lastname" placeholder="Apellidos" value="<?= $row['lastname']?>" required>
                 <input type="text" name="username" placeholder="Username" value="<?= $row['username']?>" required>
-                <input type="password" name="pass" placeholder="Password" value="<?= $row['pass']?>" required>
+                <input type="password" name="password" placeholder="Password" value="<?= $row['pass']?>" required>
                 <input type="text" name="email" placeholder="Email" value="<?= $row['email']?>" required>
 
                 <input type="submit" value="Actualizar">
