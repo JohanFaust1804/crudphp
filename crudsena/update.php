@@ -16,7 +16,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <title>Editar usuarios</title>
+        <title>Edit users</title>
         
     </head>
     <body>
@@ -29,7 +29,7 @@
                 <input type="password" name="password" placeholder="Password" value="<?= $row['pass']?>" required>
                 <input type="text" name="email" placeholder="Email" value="<?= $row['email']?>" required>
 
-                <input type="submit" value="Actualizar">
+                <input type="submit" value="Update">
             </form>
         </div>
     </body>

@@ -20,7 +20,7 @@ $query = mysqli_query($con, $sql);
 <body>
     <div class="container">
         <div class="users-form">
-            <h1>Crear Usuario</h1>
+            <h1>Create User</h1>
             <form action="controller/insert.php" method="POST">
                 <input type="text" name="nombre" placeholder="Nombre" required>
                 <input type="text" name="lastname" placeholder="Apellidos" required>
@@ -33,16 +33,16 @@ $query = mysqli_query($con, $sql);
         </div>
 
         <div class="users-table">
-            <h2>Usuarios Registrados</h2>
+            <h2>Users Registred</h2>
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
+                        <th>Name</th>
+                        <th>Lastname</th>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Acciones</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
