@@ -7,66 +7,71 @@
 html {
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background-color: #f4f4f4; /* Fondo de la página */
+    background: radial-gradient(circle, rgba(200, 200, 200, 0.8), rgba(100, 100, 100, 0.8) 70%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco para el contenedor */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad para resaltar */
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .users-form form {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 30%;
+    width: 100%;
+    max-width: 450px;
     margin: 20px auto;
-    text-align: center;
 }
 
 .users-form form input {
     font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
 }
 
 .users-form form input[type=text],
 .users-form form input[type=password],
 .users-form form input[type=email] {
-    padding: 12px;
-    border: 2px solid #aaa;
-    border-radius: 4px;
+    padding: 14px;
+    border: 2px solid #ced4da;
+    border-radius: 10px; 
     outline: none;
-    transition: 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .users-form form input[type=text]:focus,
 .users-form form input[type=password]:focus,
 .users-form form input[type=email]:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 6px 0 dodgerBlue;
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.6);
 }
 
 .users-form form input[type=submit] {
     border: none;
-    padding: 12px 50px;
+    padding: 14px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: white; 
-    color: black; 
-    border: 2px solid #60a100;
-    transition: background-color 0.4s, color 0.4s;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0056b3, #00aaff); /* Degradado moderno */
+    color: white;
+    font-size: 18px;
+    font-weight: bold; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
 }
 
 .users-form form input[type=submit]:hover {
-    background-color: #60a100;
-    color: white;
+    background: linear-gradient(135deg, #004494, #0088cc); /* Degradado más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 86, 179, 0.5);
 }
 
 .users-table {
@@ -81,39 +86,72 @@ a {
 
 .users-table th,
 .users-table td {
-    padding: 16px;
+    padding: 14px;
     text-align: center;
+    border-bottom: 2px solid #dee2e6;
+    transition: background-color 0.3s;
+}
+
+.users-table th {
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Degradado para encabezados */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; 
 }
 
 .users-table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Alternar filas de la tabla */
+    background-color: #f8f9fa; 
 }
 
 .users-table tr:hover {
-    background-color: #e0f7fa; /* Color de fila al pasar el ratón */
+    background-color: #e0e0e0; /* Color más suave al pasar el ratón */
 }
 
 .users-table--edit,
 .users-table--delete {
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 8px 14px;
+    border-radius: 6px;
     color: #fff;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .users-table--edit {
-    background: #009688; /* Color de botón Editar */
+    background: #28a745; 
 }
 
 .users-table--edit:hover {
-    background: #00796b; /* Color al pasar el ratón */
+    background: #218838;
+    transform: translateY(-2px);
 }
 
 .users-table--delete {
-    background: #b11e1e; /* Color de botón Eliminar */
+    background: #dc3545; 
 }
 
 .users-table--delete:hover {
-    background: #a11e1e; /* Color al pasar el ratón */
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Animaciones adicionales para elementos de tabla */
+.users-table td {
+    position: relative;
+}
+
+.users-table td::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 6px;
+}
+
+.users-table td:hover::before {
+    opacity: 1; /* Resaltar fila al pasar el ratón */
 }
