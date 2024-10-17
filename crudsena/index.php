@@ -49,7 +49,7 @@ $query = mysqli_query($con, $sql);
                     <?php while ($row = mysqli_fetch_array($query)): ?>
                         <tr>
                             <td><?= $row['id'] ?></td>
-                            <td><?= $row['nombre'] ?></td>
+                            <td><?= $row['name'] ?></td>
                             <td><?= $row['lastname'] ?></td>
                             <td><?= $row['username'] ?></td>
                             <td><?= $row['email'] ?></td>
